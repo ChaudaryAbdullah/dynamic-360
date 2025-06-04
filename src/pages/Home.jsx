@@ -3,6 +3,8 @@ import "../styles/Home.css"; // Import your CSS file for styling
 function Home() {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [scrollY, setScrollY] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
@@ -69,8 +71,13 @@ function Home() {
       Coding: "category-coding",
       Conference: "category-conference",
     };
+
     return classes[category] || "category-default";
   };
+
+  const filteredEvents = events.filter((event) =>
+    event.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div>
@@ -142,13 +149,23 @@ function Home() {
           <div className="fade-in">
             <h2 className="section-title gradient-text">Featured Events</h2>
             <p className="section-subtitle">
-              Discover amazing events happening in your area and connect with
-              like-minded individuals who share your passion for innovation.
+              Discover amazing events happening in your area...
             </p>
           </div>
 
+          {/*  Search Bar */}
+          <div className="mb-4 text-center custom-search-bar">
+            <input
+              type="text"
+              className="form-control w-50 mx-auto"
+              placeholder="Search events by name..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+
           <div className="row g-4">
-            {events.map((event, index) => (
+            {filteredEvents.map((event, index) => (
               <div key={event.id} className="col-lg-4 col-md-6">
                 <div
                   className="event-card fade-in"
