@@ -509,7 +509,6 @@ body {
     backdrop-filter: blur(20px);
     padding: 1rem;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    display: none;
   }
 
   .navbar-nav.show {
@@ -524,8 +523,7 @@ body {
 
   .hero-section {
     padding: 2rem 1rem;
-    min-height: 90vh;
-    text-align: center;
+    min-height: 50vh;
   }
 
   .hero-title {
@@ -644,9 +642,16 @@ body {
     font-size: 1.3rem;
   }
 
+  .navbar-nav {
+    margin: 0.5rem;
+  }
+
+  .nav-link {
+    margin: 0.4rem;
+  }
   .hero-section {
     padding: 1.5rem 0.5rem;
-    min-height: 85vh;
+    min-height: 50vh;
   }
 
   .hero-title {
@@ -768,6 +773,13 @@ body {
     font-size: clamp(1.6rem, 12vw, 2.4rem);
   }
 
+  .navbar-nav {
+    margin: 0.1rem;
+  }
+
+  .nav-link {
+    margin: 0.1rem;
+  }
   .hero-subtitle {
     font-size: clamp(0.8rem, 6vw, 1rem);
   }
@@ -802,8 +814,15 @@ body {
 
 /* Landscape orientation for mobile */
 @media (max-width: 768px) and (orientation: landscape) {
+  .navbar-nav {
+    margin: 0.5rem;
+  }
+
+  .nav-link {
+    margin: 0.4rem;
+  }
   .hero-section {
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 1rem;
   }
 
