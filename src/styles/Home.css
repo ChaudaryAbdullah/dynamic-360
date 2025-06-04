@@ -509,6 +509,7 @@ body {
     backdrop-filter: blur(20px);
     padding: 1rem;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: none;
   }
 
   .navbar-nav.show {
@@ -523,7 +524,8 @@ body {
 
   .hero-section {
     padding: 2rem 1rem;
-    margin-top: 50px;
+    min-height: 90vh;
+    text-align: center;
   }
 
   .hero-title {
@@ -651,8 +653,7 @@ body {
   }
   .hero-section {
     padding: 1.5rem 0.5rem;
-    min-height: 50vh;
-    margin-top: 50px;
+    min-height: 85vh;
   }
 
   .hero-title {
@@ -823,8 +824,7 @@ body {
     margin: 0.4rem;
   }
   .hero-section {
-    min-height: 50vh;
-    margin-top: 50px;
+    min-height: 100vh;
     padding: 1rem;
   }
 
