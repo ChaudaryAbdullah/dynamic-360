@@ -523,6 +523,7 @@ body {
 
   .hero-section {
     padding: 2rem 1rem;
+    margin-top: 50px;
   }
 
   .hero-title {
@@ -650,6 +651,8 @@ body {
   }
   .hero-section {
     padding: 1.5rem 0.5rem;
+    min-height: 50vh;
+    margin-top: 50px;
   }
 
   .hero-title {
@@ -820,6 +823,8 @@ body {
     margin: 0.4rem;
   }
   .hero-section {
+    min-height: 50vh;
+    margin-top: 50px;
     padding: 1rem;
   }
 
