@@ -247,7 +247,7 @@ function Home() {
 
                     <p className="event-description">{event.description}</p>
 
-                    <button className="btn btn-event">View Details</button>
+                    <button className="btn btn-event">Register Now</button>
                   </div>
                 </div>
               </div>
